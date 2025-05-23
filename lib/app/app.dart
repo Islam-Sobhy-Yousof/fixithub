@@ -1,6 +1,6 @@
 import 'package:fixithub/app/core/resources/theme_manager.dart';
-import 'package:fixithub/routes/app_pages.dart';
-import 'package:fixithub/routes/routes.dart';
+import 'package:fixithub/app/routes/app_pages.dart';
+import 'package:fixithub/app/routes/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:get/route_manager.dart';
 

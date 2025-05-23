@@ -5,7 +5,7 @@ import 'package:fixithub/features/auth/presentation/login/view/login_view.dart';
 import 'package:fixithub/features/on_boarding/view/on_boarding_view.dart';
 import 'package:fixithub/features/on_boarding/view_model/on_boarding_controller.dart';
 import 'package:fixithub/features/splash/view/splash_view.dart';
-import 'package:fixithub/routes/routes.dart';
+import 'package:fixithub/app/routes/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

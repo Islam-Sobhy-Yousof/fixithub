@@ -7,7 +7,7 @@ import 'package:fixithub/app/core/resources/fonts_manager.dart';
 import 'package:fixithub/app/core/resources/styles_manager.dart';
 import 'package:fixithub/app/core/resources/values_manager.dart';
 import 'package:fixithub/common/utils/helpers/helper_functions.dart';
-import 'package:fixithub/routes/routes.dart';
+import 'package:fixithub/app/routes/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:get/route_manager.dart';
 
