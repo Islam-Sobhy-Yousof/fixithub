@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class OnBoardingController extends GetxController {
-  static OnBoardingController get instance => Get.find();
+  static OnBoardingController get instance => Get.find<OnBoardingController>();
 
   int currentPageIndex = 0;
   final pageController = PageController();

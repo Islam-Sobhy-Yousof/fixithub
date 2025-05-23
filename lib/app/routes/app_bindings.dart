@@ -6,4 +6,6 @@ class AppBindings extends Bindings {
   void dependencies() {
     InjectionContainer.init();
   }
+
+  
 }
