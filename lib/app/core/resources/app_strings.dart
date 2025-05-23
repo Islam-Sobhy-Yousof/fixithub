@@ -1,0 +1,20 @@
+abstract class StringsManager {
+  static const String unKnowError = "Unknow error please try again later";
+  static const String couldNotLaunchUrl = "Couldn't launch this url";
+  static const String logoString = "FixItHub";
+  static const String noRouteFound = "Route was not found";
+  static const String skipButtonText = "Skip";
+
+  // Onboarding texts
+  static const String onboardingTitle1 = "Welcome to FixItHub";
+  static const String onboardingSubTitle1 =
+      "Your trusted platform to repair or purchase electronic devices seamlessly.";
+
+  static const String onboardingTitle2 = "Fast & Reliable Repairs";
+  static const String onboardingSubTitle2 =
+      "Submit your device, choose a service, and we’ll handle the rest with speed and care.";
+
+  static const String onboardingTitle3 = "Shop Quality Devices";
+  static const String onboardingSubTitle3 =
+      "Explore a wide range of verified, fixed, and ready-to-use electronics.";
+}
