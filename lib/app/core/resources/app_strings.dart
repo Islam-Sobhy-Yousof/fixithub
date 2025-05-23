@@ -4,6 +4,15 @@ abstract class StringsManager {
   static const String logoString = "FixItHub";
   static const String noRouteFound = "Route was not found";
   static const String skipButtonText = "Skip";
+  static const String forgetPassword = "Forget password?";
+  static const String resendVerification = "Resend Verification";
+  static const String createAnAccount = "Create an account";
+  static const String alreadyHaveAnAccount = "Already have an account?";
+  static const String loginTitle = "Login";
+  static const String emailFieldLabel = "E-Mail";
+  static const String passwordFieldLabel = "Password";
+  static const String loginSubTitle =
+      "Sign in to manage your repairs and products";
 
   // Onboarding texts
   static const String onboardingTitle1 = "Welcome to FixItHub";

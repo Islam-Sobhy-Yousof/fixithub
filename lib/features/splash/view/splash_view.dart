@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:fixithub/app/app_constants.dart';
+import 'package:fixithub/app/core/local_storage/local_storage_helper.dart';
 import 'package:fixithub/app/core/resources/app_strings.dart';
 import 'package:fixithub/app/core/resources/color_manager.dart';
 import 'package:fixithub/app/core/resources/fonts_manager.dart';
@@ -8,8 +9,9 @@ import 'package:fixithub/app/core/resources/styles_manager.dart';
 import 'package:fixithub/app/core/resources/values_manager.dart';
 import 'package:fixithub/common/utils/helpers/helper_functions.dart';
 import 'package:fixithub/app/routes/routes.dart';
+import 'package:fixithub/common/widgets/fixithub_text_logo.dart';
 import 'package:flutter/material.dart';
-import 'package:get/route_manager.dart';
+import 'package:get/get.dart';
 
 class SplashView extends StatefulWidget {
   const SplashView({super.key});
@@ -21,6 +23,8 @@ class SplashView extends StatefulWidget {
 class _SplashViewState extends State<SplashView> {
   bool _moveToCenter = false;
   bool isDark = false;
+  final LocalStorageHelper _localStorageHelper =
+      Get.find<LocalStorageHelper>();
 
   Timer? _timer;
   @override
@@ -41,10 +45,18 @@ class _SplashViewState extends State<SplashView> {
     });
   }
 
-  void _goNext() {
+  void _goNext() async {
+    final bool didSeeOnBoarding = await _localStorageHelper.didSeeOnBoarding();
 
-  
-    Get.offNamed(
+    if (didSeeOnBoarding) {
+      Get.offAllNamed(
+        Routes.login,
+      );
+
+      return;
+    }
+    _localStorageHelper.markOnboardingAsSeen();
+    Get.offAllNamed(
       Routes.onBoarding,
     );
   }
@@ -72,13 +84,8 @@ class _SplashViewState extends State<SplashView> {
             left: AppSize.s0,
             right: AppSize.s0,
             child: Center(
-                child: Text(
-              StringsManager.logoString,
-              style: getBoldStyle(
-                fontSize: FontSize.s60,
-                color: isDark ? ColorsManager.white : ColorsManager.primary,
-              ),
-            )),
+                child:  FixithubTextLogo(),
+            ),
           ),
         ],
       ),
