@@ -1,4 +1,5 @@
 import 'package:fixithub/app/core/resources/theme_manager.dart';
+import 'package:fixithub/app/routes/app_bindings.dart';
 import 'package:fixithub/app/routes/app_pages.dart';
 import 'package:fixithub/app/routes/routes.dart';
 import 'package:flutter/material.dart';
@@ -16,6 +17,7 @@ class FixItHub extends StatelessWidget {
       darkTheme: AppTheme.darkTheme,
       initialRoute: Routes.splash,
       getPages: AppPages.pages,
+      initialBinding: AppBindings(),
       
     );
   }

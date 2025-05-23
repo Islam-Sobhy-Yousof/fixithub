@@ -2,8 +2,8 @@ import 'package:fixithub/app/core/resources/app_strings.dart';
 import 'package:fixithub/app/core/resources/fonts_manager.dart';
 import 'package:fixithub/app/core/resources/styles_manager.dart';
 import 'package:fixithub/features/auth/presentation/login/view/login_view.dart';
+import 'package:fixithub/features/on_boarding/bindings/on_boarding_bindings.dart';
 import 'package:fixithub/features/on_boarding/view/on_boarding_view.dart';
-import 'package:fixithub/features/on_boarding/view_model/on_boarding_controller.dart';
 import 'package:fixithub/features/splash/view/splash_view.dart';
 import 'package:fixithub/app/routes/routes.dart';
 import 'package:flutter/material.dart';
@@ -18,17 +18,16 @@ abstract class AppPages {
     GetPage(
       name: Routes.login,
       page: () {
-        // initLoginModule();
-
         return const LoginView();
       },
     ),
     GetPage(
       name: Routes.onBoarding,
       page: () {
-        Get.put(OnBoardingController());
+       
         return OnBoardingView();
       },
+      binding: OnBoardingBindings(),
     ),
   ];
 
