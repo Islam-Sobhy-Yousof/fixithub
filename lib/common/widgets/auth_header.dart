@@ -4,10 +4,10 @@ import 'package:fixithub/app/core/resources/values_manager.dart';
 import 'package:fixithub/common/widgets/make_spacke.dart';
 import 'package:flutter/material.dart';
 
-class LoginHeader extends StatelessWidget {
-  const LoginHeader({
-    super.key,
-  });
+class AuthHeader extends StatelessWidget {
+  final String headerTitle;
+  final String headerSubTitle;
+  const AuthHeader({super.key, required this.headerTitle, required this.headerSubTitle});
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +18,7 @@ class LoginHeader extends StatelessWidget {
           height: AppSize.s40,
         ),
         Text(
-          StringsManager.loginTitle,
+          headerTitle,
           style: Theme.of(context).textTheme.headlineMedium?.copyWith(
                 fontSize: FontSize.s45,
               ),
@@ -27,7 +27,7 @@ class LoginHeader extends StatelessWidget {
           height: AppSize.s8,
         ),
         Text(
-          StringsManager.loginSubTitle,
+         headerSubTitle,
           style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                 fontSize: FontSize.s18,
               ),

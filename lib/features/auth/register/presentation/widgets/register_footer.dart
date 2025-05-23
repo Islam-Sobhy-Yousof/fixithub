@@ -3,14 +3,11 @@ import 'package:fixithub/app/core/resources/values_manager.dart';
 import 'package:fixithub/app/routes/routes.dart';
 import 'package:fixithub/common/widgets/make_spacke.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get_core/src/get_main.dart';
 import 'package:get/route_manager.dart';
 import 'package:iconsax/iconsax.dart';
 
-class LoginFooter extends StatelessWidget {
-  const LoginFooter({
-    super.key,
-  });
+class RegisterFooter extends StatelessWidget {
+  const RegisterFooter({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -21,6 +18,17 @@ class LoginFooter extends StatelessWidget {
       child: Form(
         child: Column(
           children: [
+            TextFormField(
+              decoration: InputDecoration(
+                prefixIcon: Icon(
+                  Iconsax.direct_right,
+                ),
+                labelText: StringsManager.userName,
+              ),
+            ),
+            MakeSpacke(
+              height: AppSize.s30,
+            ),
             TextFormField(
               decoration: InputDecoration(
                 prefixIcon: Icon(
@@ -47,12 +55,27 @@ class LoginFooter extends StatelessWidget {
             MakeSpacke(
               height: AppSize.s30,
             ),
+            TextFormField(
+              obscureText: true,
+              decoration: InputDecoration(
+                prefixIcon: Icon(
+                  Iconsax.direct_right,
+                ),
+                suffixIcon: Icon(
+                  Iconsax.eye_slash,
+                ),
+                labelText: StringsManager.confirmPasswordLabel,
+              ),
+            ),
+            MakeSpacke(
+              height: AppSize.s30,
+            ),
             SizedBox(
               width: double.infinity,
               child: ElevatedButton(
                 onPressed: () {},
                 child: Text(
-                  StringsManager.loginTitle,
+                  StringsManager.registerTitle,
                 ),
               ),
             ),
@@ -62,28 +85,10 @@ class LoginFooter extends StatelessWidget {
               children: [
                 TextButton(
                   onPressed: () {
-                    Get.toNamed(Routes.register);
+                    Get.offNamed(Routes.login);
                   },
                   child: Text(
-                    StringsManager.createAnAccount,
-                    style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                          decoration: TextDecoration.underline,
-                        ),
-                  ),
-                ),
-                TextButton(
-                  onPressed: () {},
-                  child: Text(
-                    StringsManager.forgetPassword,
-                    style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                          decoration: TextDecoration.underline,
-                        ),
-                  ),
-                ),
-                TextButton(
-                  onPressed: () {},
-                  child: Text(
-                    StringsManager.resendVerification,
+                    StringsManager.alreadyHaveAnAccount,
                     style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                           decoration: TextDecoration.underline,
                         ),

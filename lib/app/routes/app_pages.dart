@@ -2,6 +2,7 @@ import 'package:fixithub/app/core/resources/app_strings.dart';
 import 'package:fixithub/app/core/resources/fonts_manager.dart';
 import 'package:fixithub/app/core/resources/styles_manager.dart';
 import 'package:fixithub/features/auth/login/presentation/view/login_view.dart';
+import 'package:fixithub/features/auth/register/presentation/view/register_view.dart';
 import 'package:fixithub/features/on_boarding/bindings/on_boarding_bindings.dart';
 import 'package:fixithub/features/on_boarding/view/on_boarding_view.dart';
 import 'package:fixithub/features/splash/view/splash_view.dart';
@@ -19,6 +20,12 @@ abstract class AppPages {
       name: Routes.login,
       page: () {
         return const LoginView();
+      },
+    ),
+     GetPage(
+      name: Routes.register,
+      page: () {
+        return const RegisterView();
       },
     ),
     GetPage(

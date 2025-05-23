@@ -2,8 +2,12 @@ abstract class StringsManager {
   static const String unKnowError = "Unknow error please try again later";
   static const String couldNotLaunchUrl = "Couldn't launch this url";
   static const String logoString = "FixItHub";
+  static const String userName = "User Name";
   static const String noRouteFound = "Route was not found";
   static const String skipButtonText = "Skip";
+  static const String confirmPasswordLabel = "Confirm Password";
+  static const String registerTitle = "Register";
+  static const String registerSubTitle = "Create your account in 30 seconds";
   static const String forgetPassword = "Forget password?";
   static const String resendVerification = "Resend Verification";
   static const String createAnAccount = "Create an account";
