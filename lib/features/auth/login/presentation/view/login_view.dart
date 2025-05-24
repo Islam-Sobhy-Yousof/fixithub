@@ -23,7 +23,7 @@ class _LoginViewState extends State<LoginView> {
             children: [
               AuthHeader(
                 headerTitle: StringsManager.loginTitle,
-                headerSubTitle: StringsManager.registerSubTitle,
+                headerSubTitle: StringsManager.loginSubTitle,
               ),
               MakeSpacke(),
               LoginFooter(),

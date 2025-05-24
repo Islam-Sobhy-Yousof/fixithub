@@ -1,4 +1,4 @@
-import 'package:fixithub/features/on_boarding/view_model/on_boarding_controller.dart';
+import 'package:fixithub/features/on_boarding/presentation/controllers/on_boarding_controller.dart';
 import 'package:get/get.dart';
 
 class OnBoardingBindings extends Bindings {

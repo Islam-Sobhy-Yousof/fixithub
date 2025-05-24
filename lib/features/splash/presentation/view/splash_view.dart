@@ -55,6 +55,7 @@ class _SplashViewState extends State<SplashView> {
 
       return;
     }
+    //user didn't see the onboarding yet but now it's presented to him
     _localStorageHelper.markOnboardingAsSeen();
     Get.offAllNamed(
       Routes.onBoarding,

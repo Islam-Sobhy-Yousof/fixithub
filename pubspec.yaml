@@ -25,6 +25,8 @@ dependencies:
   flutter_native_splash: ^2.4.4
   smooth_page_indicator: ^1.2.1
   pretty_dio_logger: ^1.4.0
+  json_serializable: ^6.9.5
+  build_runner: ^2.4.15
 
 dev_dependencies:
   flutter_test:

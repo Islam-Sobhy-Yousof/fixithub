@@ -2,10 +2,11 @@ import 'package:fixithub/app/core/resources/app_strings.dart';
 import 'package:fixithub/app/core/resources/fonts_manager.dart';
 import 'package:fixithub/app/core/resources/styles_manager.dart';
 import 'package:fixithub/features/auth/login/presentation/view/login_view.dart';
+import 'package:fixithub/features/auth/register/presentation/controllers/register_bindings.dart';
 import 'package:fixithub/features/auth/register/presentation/view/register_view.dart';
-import 'package:fixithub/features/on_boarding/bindings/on_boarding_bindings.dart';
-import 'package:fixithub/features/on_boarding/view/on_boarding_view.dart';
-import 'package:fixithub/features/splash/view/splash_view.dart';
+import 'package:fixithub/features/on_boarding/presentation/controllers/on_boarding_bindings.dart';
+import 'package:fixithub/features/on_boarding/presentation/view/on_boarding_view.dart';
+import 'package:fixithub/features/splash/presentation/view/splash_view.dart';
 import 'package:fixithub/app/routes/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -27,6 +28,7 @@ abstract class AppPages {
       page: () {
         return const RegisterView();
       },
+      binding: RegisterBindings(),
     ),
     GetPage(
       name: Routes.onBoarding,

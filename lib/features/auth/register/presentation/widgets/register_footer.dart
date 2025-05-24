@@ -2,12 +2,15 @@ import 'package:fixithub/app/core/resources/app_strings.dart';
 import 'package:fixithub/app/core/resources/values_manager.dart';
 import 'package:fixithub/app/routes/routes.dart';
 import 'package:fixithub/common/widgets/make_spacke.dart';
+import 'package:fixithub/features/auth/register/presentation/controllers/register_controller.dart';
 import 'package:flutter/material.dart';
-import 'package:get/route_manager.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 
 class RegisterFooter extends StatelessWidget {
-  const RegisterFooter({super.key});
+  RegisterFooter({super.key});
+
+  final _controller = RegisterController.instance;
 
   @override
   Widget build(BuildContext context) {
@@ -16,6 +19,7 @@ class RegisterFooter extends StatelessWidget {
         vertical: AppSize.s24,
       ),
       child: Form(
+        key: _controller.formKey,
         child: Column(
           children: [
             TextFormField(
@@ -25,6 +29,7 @@ class RegisterFooter extends StatelessWidget {
                 ),
                 labelText: StringsManager.userName,
               ),
+              controller: _controller.userNameController,
             ),
             MakeSpacke(
               height: AppSize.s30,
@@ -36,6 +41,7 @@ class RegisterFooter extends StatelessWidget {
                 ),
                 labelText: StringsManager.emailFieldLabel,
               ),
+              controller: _controller.emailController,
             ),
             MakeSpacke(
               height: AppSize.s30,
@@ -51,6 +57,7 @@ class RegisterFooter extends StatelessWidget {
                 ),
                 labelText: StringsManager.passwordFieldLabel,
               ),
+              controller: _controller.passwordController,
             ),
             MakeSpacke(
               height: AppSize.s30,
@@ -66,9 +73,39 @@ class RegisterFooter extends StatelessWidget {
                 ),
                 labelText: StringsManager.confirmPasswordLabel,
               ),
+              controller: _controller.confirmPasswordController,
             ),
             MakeSpacke(
-              height: AppSize.s30,
+              height: AppSize.s12,
+            ),
+            Obx(
+              () => Row(
+                children: [
+                  Checkbox(
+                      value: _controller.isNormalUser.value,
+                      onChanged: (_) {
+                        _controller.toggelUserTypeCheckBox();
+                      }),
+                  Text(
+                    StringsManager.normalUser,
+                  ),
+                  MakeSpacke(
+                    width: AppSize.s10,
+                    height: AppSize.s0,
+                  ),
+                  Checkbox(
+                      value: !_controller.isNormalUser.value,
+                      onChanged: (_) {
+                        _controller.toggelUserTypeCheckBox();
+                      }),
+                  Text(
+                    StringsManager.workerUser,
+                  ),
+                ],
+              ),
+            ),
+            MakeSpacke(
+              height: AppSize.s12,
             ),
             SizedBox(
               width: double.infinity,

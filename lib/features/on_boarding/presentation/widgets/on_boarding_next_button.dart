@@ -1,6 +1,6 @@
 import 'package:fixithub/app/core/resources/values_manager.dart';
 import 'package:fixithub/common/utils/device/device_utility.dart';
-import 'package:fixithub/features/on_boarding/view_model/on_boarding_controller.dart';
+import 'package:fixithub/features/on_boarding/presentation/controllers/on_boarding_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 
