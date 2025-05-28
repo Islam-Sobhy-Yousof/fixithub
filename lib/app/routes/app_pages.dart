@@ -13,6 +13,8 @@ import 'package:fixithub/features/on_boarding/presentation/controllers/on_boardi
 import 'package:fixithub/features/on_boarding/presentation/view/on_boarding_view.dart';
 import 'package:fixithub/features/splash/presentation/view/splash_view.dart';
 import 'package:fixithub/app/routes/routes.dart';
+import 'package:fixithub/features/store/main/controller/main_bindings.dart';
+import 'package:fixithub/features/store/main/view/main_view.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -70,6 +72,13 @@ abstract class AppPages {
         return OnBoardingView();
       },
       binding: OnBoardingBindings(),
+    ),
+      GetPage(
+      name: Routes.main,
+      page: () {
+        return MainView();
+      },
+      binding: MainBindings(),
     ),
   ];
 

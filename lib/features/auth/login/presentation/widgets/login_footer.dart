@@ -50,7 +50,11 @@ class LoginFooter extends StatelessWidget {
             SizedBox(
               width: double.infinity,
               child: ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Get.offAllNamed(
+                    Routes.main,
+                  );
+                },
                 child: Text(
                   StringsManager.loginTitle,
                 ),
