@@ -9,8 +9,8 @@ import 'package:get/route_manager.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
 
-class VerifyAccountFotter extends StatelessWidget {
-  const VerifyAccountFotter({
+class ResetPasswordFotter extends StatelessWidget {
+  const ResetPasswordFotter({
     super.key,
   });
 
@@ -21,11 +21,14 @@ class VerifyAccountFotter extends StatelessWidget {
         children: [
           TextFormField(
             decoration: InputDecoration(
+              labelText: StringsManager.emailFieldLabel,
               prefixIcon: Icon(
                 Iconsax.direct_right,
               ),
-              labelText: StringsManager.emailFieldLabel,
             ),
+          ),
+          MakeSpacke(
+            height: AppSize.s30,
           ),
           MakeSpacke(
             height: AppSize.s30,
@@ -49,6 +52,34 @@ class VerifyAccountFotter extends StatelessWidget {
           MakeSpacke(
             height: AppSize.s30,
           ),
+          TextFormField(
+            decoration: InputDecoration(
+              labelText: StringsManager.newPasswordFieldLabel,
+              suffixIcon: Icon(
+                Iconsax.eye_slash,
+              ),
+              prefixIcon: Icon(
+                Iconsax.password_check,
+              ),
+            ),
+          ),
+          MakeSpacke(
+            height: AppSize.s30,
+          ),
+          TextFormField(
+            decoration: InputDecoration(
+              labelText: StringsManager.confirmPasswordLabel,
+              suffixIcon: Icon(
+                Iconsax.eye_slash,
+              ),
+              prefixIcon: Icon(
+                Iconsax.password_check,
+              ),
+            ),
+          ),
+          MakeSpacke(
+            height: AppSize.s30,
+          ),
           SizedBox(
             width: AppSize.sinf,
             child: ElevatedButton(
@@ -58,22 +89,9 @@ class VerifyAccountFotter extends StatelessWidget {
                 );
               },
               child: Text(
-                StringsManager.verifyAccount,
+                StringsManager.resetPasswordTitle,
               ),
             ),
-          ),
-          MakeSpacke(),
-          TextButton(
-            onPressed: () {},
-            child: Text(
-              StringsManager.resendVerificationCode,
-              style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                    decoration: TextDecoration.underline,
-                  ),
-            ),
-          ),
-          MakeSpacke(
-            height: AppSize.s50,
           ),
         ],
       ),

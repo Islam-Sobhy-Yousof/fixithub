@@ -25,7 +25,7 @@ class RegisterFooter extends StatelessWidget {
             TextFormField(
               decoration: InputDecoration(
                 prefixIcon: Icon(
-                  Iconsax.direct_right,
+                  Iconsax.user,
                 ),
                 labelText: StringsManager.userName,
               ),
@@ -50,7 +50,7 @@ class RegisterFooter extends StatelessWidget {
               obscureText: true,
               decoration: InputDecoration(
                 prefixIcon: Icon(
-                  Iconsax.direct_right,
+                  Iconsax.password_check,
                 ),
                 suffixIcon: Icon(
                   Iconsax.eye_slash,
@@ -66,7 +66,7 @@ class RegisterFooter extends StatelessWidget {
               obscureText: true,
               decoration: InputDecoration(
                 prefixIcon: Icon(
-                  Iconsax.direct_right,
+                  Iconsax.password_check,
                 ),
                 suffixIcon: Icon(
                   Iconsax.eye_slash,
@@ -110,16 +110,16 @@ class RegisterFooter extends StatelessWidget {
             SizedBox(
               width: double.infinity,
               child: ElevatedButton(
-                onPressed: (){
+                onPressed: () {
                   Get.toNamed(Routes.verifyAccount);
                 },
                 child: Obx(() {
-                  if(_controller.isLoading.value){
+                  if (_controller.isLoading.value) {
                     return CircularProgressIndicator();
                   }
-                 return Text(
-                      StringsManager.registerTitle,
-                    );
+                  return Text(
+                    StringsManager.registerTitle,
+                  );
                 }),
               ),
             ),

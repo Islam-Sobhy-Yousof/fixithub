@@ -7,7 +7,8 @@ import 'package:flutter/material.dart';
 class AuthHeader extends StatelessWidget {
   final String headerTitle;
   final String headerSubTitle;
-  const AuthHeader({super.key, required this.headerTitle, required this.headerSubTitle});
+  const AuthHeader(
+      {super.key, required this.headerTitle, required this.headerSubTitle});
 
   @override
   Widget build(BuildContext context) {
@@ -20,14 +21,14 @@ class AuthHeader extends StatelessWidget {
         Text(
           headerTitle,
           style: Theme.of(context).textTheme.headlineMedium?.copyWith(
-                fontSize: FontSize.s45,
+                fontSize: FontSize.s32,
               ),
         ),
         MakeSpacke(
           height: AppSize.s8,
         ),
         Text(
-         headerSubTitle,
+          headerSubTitle,
           style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                 fontSize: FontSize.s18,
               ),

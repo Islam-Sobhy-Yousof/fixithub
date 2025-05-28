@@ -1,15 +1,17 @@
+import 'package:fixithub/app/core/local_storage/local_storage_helper.dart';
 import 'package:fixithub/app/routes/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class OnBoardingController extends GetxController {
   static OnBoardingController get instance => Get.find<OnBoardingController>();
-
+  final LocalStorageHelper _localStorageHelper = Get.find<LocalStorageHelper>();
   int currentPageIndex = 0;
   final pageController = PageController();
 
-  void nextPage() {
+  void nextPage() async {
     if (currentPageIndex == 2) {
+     await _localStorageHelper.markOnboardingAsSeen();
       Get.offNamed(
         Routes.login,
       );

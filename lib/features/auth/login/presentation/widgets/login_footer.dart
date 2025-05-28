@@ -35,11 +35,11 @@ class LoginFooter extends StatelessWidget {
             TextFormField(
               obscureText: true,
               decoration: InputDecoration(
-                prefixIcon: Icon(
-                  Iconsax.direct_right,
-                ),
                 suffixIcon: Icon(
                   Iconsax.eye_slash,
+                ),
+                prefixIcon: Icon(
+                  Iconsax.password_check,
                 ),
                 labelText: StringsManager.passwordFieldLabel,
               ),
@@ -72,7 +72,9 @@ class LoginFooter extends StatelessWidget {
                   ),
                 ),
                 TextButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Get.toNamed(Routes.forgotPassword);
+                  },
                   child: Text(
                     StringsManager.forgetPassword,
                     style: Theme.of(context).textTheme.bodyMedium?.copyWith(
@@ -81,7 +83,9 @@ class LoginFooter extends StatelessWidget {
                   ),
                 ),
                 TextButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Get.toNamed(Routes.resendOTP);
+                  },
                   child: Text(
                     StringsManager.resendVerification,
                     style: Theme.of(context).textTheme.bodyMedium?.copyWith(
