@@ -1,6 +1,8 @@
 abstract class AppConstants {
   static const String localCurrency = "en_US";
   static const String defaultAppLanguage = "en";
+  static const String empty = "";
+  static const int zero = 0;
   static const String token = "dummy token";
   static const String localCurrencySymbol = "\$";
   static const String dateFormatPattern = "dd-MMM-yyyy";

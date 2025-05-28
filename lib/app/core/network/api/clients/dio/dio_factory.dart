@@ -1,6 +1,7 @@
 import 'package:dio/dio.dart';
 import 'package:fixithub/app/app_constants.dart';
 import 'package:fixithub/app/core/local_storage/local_storage_helper.dart';
+import 'package:fixithub/app/core/network/api/api_routes.dart';
 import 'package:flutter/foundation.dart';
 import 'package:pretty_dio_logger/pretty_dio_logger.dart';
 
@@ -30,6 +31,7 @@ class DioFactory {
     };
 
     dio.options = BaseOptions(
+      baseUrl: ApiRoutes.baserUrl,
       headers: headers,
       receiveTimeout: AppConstants.apiTimeOut,
       sendTimeout: AppConstants.apiTimeOut,

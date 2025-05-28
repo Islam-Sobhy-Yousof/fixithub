@@ -8,14 +8,14 @@ class ErrorModel {
   ErrorModel({
     required this.success,
     required this.error,
-    required this.details,
+    this.details,
   });
 
   factory ErrorModel.fromJson(Map<String, dynamic> json) {
     return ErrorModel(
-      success: json[ApiKeys.success],
-      error: json[ApiKeys.error],
-      details: json[ApiKeys.details],
+      success: json[ApiKeys.success] as bool?,
+      error: json[ApiKeys.error] as String?,
+      details: json[ApiKeys.details] as String?,
     );
   }
 }

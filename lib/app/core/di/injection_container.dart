@@ -3,6 +3,9 @@ import 'package:fixithub/app/core/local_storage/local_storage_helper.dart';
 import 'package:fixithub/app/core/network/api/api_consumer.dart';
 import 'package:fixithub/app/core/network/api/clients/dio/dio_consumer.dart';
 import 'package:fixithub/app/core/network/api/clients/dio/dio_factory.dart';
+import 'package:fixithub/features/auth/data/data_sources/auth_remote_data_source.dart';
+import 'package:fixithub/features/auth/data/repository/auth_repository_impl.dart';
+import 'package:fixithub/features/auth/domain/repository/auth_repository.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 
@@ -33,6 +36,19 @@ class InjectionContainer {
         dio: dio,
       ),
     );
-  }
 
+    //! should modifiy this to auth bindings
+
+    Get.lazyPut<AuthRemoteDataSource>(
+      () => AuthRemoteDataSourceImpl(
+        apiConsumer: Get.find(),
+      ),
+    );
+
+    Get.lazyPut<AuthRepository>(
+      () => AuthRepositoryImpl(
+        authRemoteDataSource: Get.find(),
+      ),
+    );
+  }
 }

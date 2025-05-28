@@ -1,4 +1,3 @@
-
 import 'package:dio/dio.dart';
 import 'package:fixithub/app/core/network/api/api_consumer.dart';
 import 'package:fixithub/app/core/network/api/api_routes.dart';
@@ -8,7 +7,8 @@ class DioConsumer extends ApiConsumer {
   final Dio dio;
 
   DioConsumer({required this.dio}) {
-    dio.options.baseUrl = ApiRoutes.baserUrl;
+    //! should be used only if you are not using dio factory
+    // dio.options.baseUrl = ApiRoutes.baserUrl;
   }
 
 //!POST
@@ -18,13 +18,15 @@ class DioConsumer extends ApiConsumer {
       Map<String, dynamic>? queryParameters,
       bool isFormData = false}) async {
     try {
-      dio.post(
+      var res = await dio.post(
         path,
         data: isFormData ? FormData.fromMap(data) : data,
         queryParameters: queryParameters,
       );
+    
+      return res.data;
     } on DioException catch (e) {
-        DioErrorHandler.handleDioException(e);
+      DioErrorHandler.handleDioException(e);
     }
   }
 
@@ -37,7 +39,7 @@ class DioConsumer extends ApiConsumer {
           await dio.get(path, data: data, queryParameters: queryParameters);
       return res.data;
     } on DioException catch (e) {
-        DioErrorHandler.handleDioException(e);
+      DioErrorHandler.handleDioException(e);
     }
   }
 
@@ -53,7 +55,7 @@ class DioConsumer extends ApiConsumer {
       );
       return res.data;
     } on DioException catch (e) {
-    DioErrorHandler.handleDioException(e);
+      DioErrorHandler.handleDioException(e);
     }
   }
 
@@ -71,7 +73,7 @@ class DioConsumer extends ApiConsumer {
       );
       return res.data;
     } on DioException catch (e) {
-        DioErrorHandler.handleDioException(e);
+      DioErrorHandler.handleDioException(e);
     }
   }
 }

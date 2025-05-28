@@ -110,10 +110,15 @@ class RegisterFooter extends StatelessWidget {
             SizedBox(
               width: double.infinity,
               child: ElevatedButton(
-                onPressed: () {},
-                child: Text(
-                  StringsManager.registerTitle,
-                ),
+                onPressed: _controller.register,
+                child: Obx(() {
+                  if(_controller.isLoading.value){
+                    return CircularProgressIndicator();
+                  }
+                 return Text(
+                      StringsManager.registerTitle,
+                    );
+                }),
               ),
             ),
             MakeSpacke(),

@@ -1,5 +1,6 @@
 abstract class StringsManager {
   static const String unKnowError = "Unknow error please try again later";
+  static const String requestCancelMessage = "Request was cancelled";
   static const String couldNotLaunchUrl = "Couldn't launch this url";
   static const String logoString = "FixItHub";
   static const String normalUser = "Normal User";
@@ -17,6 +18,8 @@ abstract class StringsManager {
   static const String loginTitle = "Login";
   static const String emailFieldLabel = "E-Mail";
   static const String passwordFieldLabel = "Password";
+  static const String defaultFailureMessage =
+      "Something went wrong, please try again later.";
   static const String loginSubTitle =
       "Sign in to manage your repairs and products";
 
