@@ -6,4 +6,5 @@ abstract class Routes {
   static const String onBoarding = "/onBoarding";
   static const String main = "/main";
   static const String storeDetails = "/storeDetails";
+  static const String verifyAccount = "/verifyAccount";
 }

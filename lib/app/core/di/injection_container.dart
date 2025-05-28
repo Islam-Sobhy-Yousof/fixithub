@@ -16,39 +16,41 @@ class InjectionContainer {
     await getStorage.initStorage;
 
     //Init Local storage helper
-    Get.lazyPut<LocalStorageHelper>(() => LocalStorageHelperImpl(
+    Get.put<LocalStorageHelper>( LocalStorageHelperImpl(
           getStorage: getStorage,
-        ));
+        ),permanent: true,);
 
     //Init Dio factory
-    Get.lazyPut(
-      () => DioFactory(
+    Get.put(
+DioFactory(
         localStorage: Get.find(),
       ),
+      permanent: true,
     );
 
     //Init dio instance
     final Dio dio = Get.find<DioFactory>().getDio();
 
     //Init Dio Consumer
-    Get.lazyPut<ApiConsumer>(
-      () => DioConsumer(
+    Get.put<ApiConsumer>(
+       DioConsumer(
         dio: dio,
       ),
+      permanent: true,
     );
 
     //! should modifiy this to auth bindings
 
-    Get.lazyPut<AuthRemoteDataSource>(
-      () => AuthRemoteDataSourceImpl(
-        apiConsumer: Get.find(),
-      ),
-    );
+    // Get.lazyPut<AuthRemoteDataSource>(
+    //   () => AuthRemoteDataSourceImpl(
+    //     apiConsumer: Get.find(),
+    //   ),
+    // );
 
-    Get.lazyPut<AuthRepository>(
-      () => AuthRepositoryImpl(
-        authRemoteDataSource: Get.find(),
-      ),
-    );
+    // Get.lazyPut<AuthRepository>(
+    //   () => AuthRepositoryImpl(
+    //     authRemoteDataSource: Get.find(),
+    //   ),
+    // );
   }
 }

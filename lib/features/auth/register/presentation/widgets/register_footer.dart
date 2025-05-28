@@ -110,7 +110,9 @@ class RegisterFooter extends StatelessWidget {
             SizedBox(
               width: double.infinity,
               child: ElevatedButton(
-                onPressed: _controller.register,
+                onPressed: (){
+                  Get.toNamed(Routes.verifyAccount);
+                },
                 child: Obx(() {
                   if(_controller.isLoading.value){
                     return CircularProgressIndicator();

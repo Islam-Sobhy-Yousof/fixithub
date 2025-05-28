@@ -3,7 +3,6 @@ const String jsonPath = "assets/json";
 
 class ImageAssets {
   static const String splashLogo = "$imagePath/fixithub_splash_logo.png";
-
 }
 
 class JsonAssets {
@@ -11,4 +10,5 @@ class JsonAssets {
   static const String onBoardingTwo = "$jsonPath/onBoarding_two.json";
   static const String onBoardingThree = "$jsonPath/onBoarding_three.json";
   static const String onBoardingFour = "$jsonPath/onBoarding_four.json";
+  static const String verifyAccount = "$jsonPath/email_verification.json";
 }

@@ -16,7 +16,7 @@ class OnBoardingPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  Padding(
+    return Padding(
       padding: const EdgeInsets.all(
         AppPadding.p16,
       ),
@@ -24,8 +24,8 @@ class OnBoardingPage extends StatelessWidget {
         children: [
           Lottie.asset(
             image,
-            height: HelperFunctions.screenHeight() * AppFractions.s6,
-            width: HelperFunctions.screenWidth() * AppFractions.s8,
+            height: HelperFunctions.screenHeight() * AppFractions.f6,
+            width: HelperFunctions.screenWidth() * AppFractions.f8,
           ),
           MakeSpacke(),
           Text(
@@ -34,7 +34,7 @@ class OnBoardingPage extends StatelessWidget {
           ),
           MakeSpacke(),
           Text(
-           subTitle,
+            subTitle,
             style: Theme.of(context).textTheme.bodyLarge,
             textAlign: TextAlign.center,
           ),
