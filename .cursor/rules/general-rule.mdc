@@ -1,0 +1,11 @@
+---
+description: 
+globs: *.dart
+alwaysApply: false
+---
+When generating code, always adhere strictly to SOLID principles: ensure each class or function has a single responsibility, the code is open for extension but closed for modification, derived classes or implementations can replace their base types without breaking functionality, interfaces are segregated to avoid forcing unused dependencies, and high-level modules do not depend on low-level modules but rather both depend on abstractions. Organize the architecture using clean, layered principles, separating concerns into domain, application, presentation, and data layers. Avoid hardcoded values; instead, use constants, configuration, or dependency injection. Group related components logically within clearly named folders like models, controllers, services, and views.
+
+Write code that is composable and easily testable, ensuring functions and classes can be unit tested independently. Minimize unnecessary comments, focusing only on explaining complex logic or architectural decisions. Use meaningful naming conventions to clearly communicate the purpose of each class, function, or variable. Apply appropriate design patterns such as Factory, Builder, Repository, Strategy, and State to solve structural and behavioral problems where needed. For object construction and logic abstraction, use dependency injection and avoid global access or service locators. Separate UI code from logic, especially in frameworks like Flutter, and maintain a clear file and module structure.
+Favor immutable data and declarative approaches where possible. Ensure that the code is idiomatic for the language or framework used, avoiding outdated or deprecated practices. Make the code easy to understand and maintain for other developers by keeping it clean, consistent, and predictable.
+
+If the project is in Flutter, follow clean MVVM or clean architecture with layers like BaseViewModel, UseCase, StateRenderer, and prefer using tools like freezed for immutable state management and pattern matching. Use reactive state management appropriately (such as GetX or Riverpod), keep widgets stateless when possible, and strictly isolate presentation from business logic

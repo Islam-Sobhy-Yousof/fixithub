@@ -50,7 +50,10 @@ class MainView extends StatelessWidget {
         ),
       ),
       body: Obx(
-        () => controller.screens[controller.currentIndex.value],
+        () => IndexedStack(
+          index: controller.currentIndex.value,
+          children: controller.screens,
+        ),
       ),
     );
   }
