@@ -3,10 +3,12 @@ import 'package:fixithub/app/core/resources/color_manager.dart';
 import 'package:fixithub/app/core/resources/values_manager.dart';
 import 'package:fixithub/app/routes/routes.dart';
 import 'package:fixithub/common/styles/curved_clipper.dart';
+import 'package:fixithub/common/utils/helpers/helper_functions.dart';
 import 'package:fixithub/common/widgets/cart_counter_icon.dart';
 import 'package:fixithub/common/widgets/circular_container.dart';
 import 'package:fixithub/common/widgets/custom_app_bar.dart';
 import 'package:fixithub/common/widgets/custom_curved_container.dart';
+import 'package:fixithub/common/widgets/custom_search_bar.dart';
 import 'package:fixithub/common/widgets/make_spacke.dart';
 import 'package:fixithub/common/widgets/primary_store_header.dart';
 import 'package:fixithub/features/store/pages/home/home_app_bar.dart';
@@ -30,9 +32,12 @@ class HomeView extends StatelessWidget {
                 height: AppSize.s300,
                 child: Column(
                   children: [
-                    HomeAppBar(),
-                   
-                    
+                    const HomeAppBar(),
+                    MakeSpacke(),
+                    CustomSearchBar(
+                      text: StringsManager.searchFieldMessage,
+                      icon: Iconsax.search_normal,
+                    ),
                   ],
                 ),
               )),
