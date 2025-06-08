@@ -16,8 +16,8 @@ class PrimaryStoreHeader extends StatelessWidget {
   Widget build(BuildContext context) {
     return CustomCurvedContainer(
       child: Container(
-        padding: EdgeInsets.all(
-          AppSize.s0,
+        padding: EdgeInsets.only(
+          bottom: AppSize.s8,
         ),
         decoration: BoxDecoration(
           color: ColorsManager.lightPrimary,

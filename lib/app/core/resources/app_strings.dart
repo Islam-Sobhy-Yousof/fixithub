@@ -3,6 +3,8 @@ abstract class StringsManager {
   static const String requestCancelMessage = "Request was cancelled";
   static const String couldNotLaunchUrl = "Couldn't launch this url";
   static const String logoString = "FixItHub";
+  static const String hiMessage = "Hi, ";
+  static const String fakeUserName = "Islam";
   static const String resendOtpTitle = "Resend Verification Code";
   static const String resendOtpSubTitle =
       "Enter your email to receive a new OTP";
