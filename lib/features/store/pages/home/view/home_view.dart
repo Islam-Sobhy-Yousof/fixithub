@@ -1,19 +1,15 @@
 import 'package:fixithub/app/core/resources/app_strings.dart';
 import 'package:fixithub/app/core/resources/color_manager.dart';
 import 'package:fixithub/app/core/resources/values_manager.dart';
-import 'package:fixithub/app/routes/routes.dart';
-import 'package:fixithub/common/styles/curved_clipper.dart';
 import 'package:fixithub/common/utils/helpers/helper_functions.dart';
-import 'package:fixithub/common/widgets/cart_counter_icon.dart';
-import 'package:fixithub/common/widgets/circular_container.dart';
-import 'package:fixithub/common/widgets/custom_app_bar.dart';
-import 'package:fixithub/common/widgets/custom_curved_container.dart';
 import 'package:fixithub/common/widgets/custom_search_bar.dart';
+import 'package:fixithub/common/widgets/custom_section_heading.dart';
 import 'package:fixithub/common/widgets/make_spacke.dart';
 import 'package:fixithub/common/widgets/primary_store_header.dart';
-import 'package:fixithub/features/store/pages/home/home_app_bar.dart';
+import 'package:fixithub/common/widgets/vertical_text_image.dart';
+import 'package:fixithub/features/store/pages/home/widgets/home_app_bar.dart';
+import 'package:fixithub/features/store/pages/home/widgets/home_categories.dart';
 import 'package:flutter/material.dart';
-import 'package:get/route_manager.dart';
 import 'package:iconsax/iconsax.dart';
 
 class HomeView extends StatelessWidget {
@@ -22,29 +18,38 @@ class HomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(
-        child: SingleChildScrollView(
-          child: Column(
-            children: [
-              PrimaryStoreHeader(
-                  child: SizedBox(
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            PrimaryStoreHeader(
+              child: SizedBox(
                 width: AppSize.sinf,
-                height: AppSize.s300,
                 child: Column(
                   children: [
                     const HomeAppBar(),
-                    MakeSpacke(),
-                    CustomSearchBar(
+                    const MakeSpacke(),
+                    const CustomSearchBar(
                       text: StringsManager.searchFieldMessage,
                       icon: Iconsax.search_normal,
                     ),
+                    const MakeSpacke(
+                      height: AppSize.s30,
+                    ),
+                    const CustomSectionHeading(
+                      text: StringsManager.popularCategories,
+                      showActionButton: false,
+                    ),
+                    const MakeSpacke(),
+                    HomeCategories()
                   ],
                 ),
-              )),
-            ],
-          ),
+              ),
+            ),
+          ],
         ),
       ),
     );
   }
 }
+
+
