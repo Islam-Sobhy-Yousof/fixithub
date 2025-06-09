@@ -5,8 +5,8 @@ import 'package:fixithub/features/on_boarding/presentation/controllers/on_boardi
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
-class OnBoardingDotsIndicator extends StatelessWidget {
-  const OnBoardingDotsIndicator({
+class CustomDotsIndicator extends StatelessWidget {
+  const CustomDotsIndicator({
     super.key,
     required PageController pageController,
   }) : _pageController = pageController;

@@ -39,13 +39,12 @@ class OnBoardingView extends StatelessWidget {
             ],
           ),
           OnBoardingSkipButton(),
-          OnBoardingDotsIndicator(
+          CustomDotsIndicator(
             pageController: _controller.pageController,
           ),
           OnBoardingNextButton(),
         ],
       ),
     );
-    
   }
 }

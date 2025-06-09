@@ -48,6 +48,7 @@ class AppSize {
   static const double s100 = 100.0;
   static const double s120 = 120.0;
   static const double s140 = 140.0;
+  static const double s150 = 150.0;
   static const double s160 = 160.0;
   static const double s190 = 190.0;
   static const double s200 = 200.0;
@@ -62,6 +63,7 @@ abstract class AppFractions {
   static const double f4 = 0.4;
   static const double f6 = 0.6;
   static const double f8 = 0.8;
+  static const double f10 = 1;
 }
 
 abstract class AppValues {
