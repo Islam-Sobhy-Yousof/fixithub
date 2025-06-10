@@ -58,6 +58,7 @@ class AppSize {
   static const double s190 = 190.0;
   static const double s200 = 200.0;
   static const double s250 = 250.0;
+  static const double s288 = 288.0;
   static const double s300 = 300.0;
   static const double s350 = 350.0;
   static const double s400 = 400.0;
@@ -96,8 +97,8 @@ abstract class AppValues {
 }
 
 abstract class AppDoubleValues {
-    static const double v0 = 0;
-    static const double v1 = 1;
+  static const double v0 = 0;
+  static const double v1 = 1;
   static const double v2 = 2;
   static const double v3 = 3;
   static const double v4 = 4;

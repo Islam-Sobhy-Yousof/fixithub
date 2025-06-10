@@ -44,7 +44,7 @@ class VerticalTextImage extends StatelessWidget {
               child: Center(
                 child: Icon(
                   Iconsax
-                      .battery_full, //! image should be here instead of an icon
+                      .folder_connection, //! image should be here instead of an icon
                   color: ColorsManager.primary,
                 ),
               ),
