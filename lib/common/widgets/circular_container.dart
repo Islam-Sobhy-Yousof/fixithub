@@ -2,13 +2,15 @@ import 'package:fixithub/app/core/resources/color_manager.dart';
 import 'package:fixithub/app/core/resources/values_manager.dart';
 import 'package:flutter/material.dart';
 
-class CircularContainer extends StatelessWidget {
-  const CircularContainer({
+class CustomRoundedContainer extends StatelessWidget {
+  const CustomRoundedContainer({
     super.key,
     this.width = AppSize.s400,
     this.height = AppSize.s400,
-    this.raduis = AppSize.s400,
-    this.padding = AppSize.s0,
+    this.raduis = AppSize.s16,
+    this.padding = const EdgeInsets.all(
+      AppSize.s0,
+    ),
     this.opacityFraction = AppFractions.f1,
     this.margin,
     this.child,
@@ -19,7 +21,7 @@ class CircularContainer extends StatelessWidget {
   final double? height;
   final double raduis;
   final double opacityFraction;
-  final double? padding;
+  final EdgeInsets? padding;
   final EdgeInsets? margin;
   final Widget? child;
   final Color backgroundColor;
@@ -29,9 +31,7 @@ class CircularContainer extends StatelessWidget {
       width: width,
       height: height,
       margin: margin,
-      padding: const EdgeInsets.all(
-        AppSize.s0,
-      ),
+      padding: padding,
       decoration: BoxDecoration(
         color: backgroundColor.withOpacity(
           opacityFraction,

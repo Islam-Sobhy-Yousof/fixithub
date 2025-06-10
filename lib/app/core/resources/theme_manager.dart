@@ -383,7 +383,7 @@ abstract class AppTextFormFieldThemes {
     ),
     errorStyle: const TextStyle().copyWith(
       fontStyle: FontStyle.normal,
-      color: ColorsManager.error,
+      color: ColorsManager.red,
     ),
     floatingLabelStyle: TextStyle(
       // ignore: deprecated_member_use
@@ -403,7 +403,7 @@ abstract class AppTextFormFieldThemes {
     ),
     errorBorder: OutlineInputBorder(
       borderRadius: BorderRadius.circular(AppSize.s10),
-      borderSide: BorderSide(width: 1, color: ColorsManager.error),
+      borderSide: BorderSide(width: 1, color: ColorsManager.red),
     ),
     focusedErrorBorder: OutlineInputBorder(
       borderRadius: BorderRadius.circular(AppSize.s10),
@@ -429,7 +429,7 @@ abstract class AppTextFormFieldThemes {
     ),
     errorStyle: const TextStyle().copyWith(
       fontStyle: FontStyle.normal,
-      color: ColorsManager.error,
+      color: ColorsManager.red,
     ),
     floatingLabelStyle: TextStyle(
       // ignore: deprecated_member_use
@@ -449,7 +449,7 @@ abstract class AppTextFormFieldThemes {
     ),
     errorBorder: OutlineInputBorder(
       borderRadius: BorderRadius.circular(AppSize.s10),
-      borderSide: BorderSide(width: 1, color: ColorsManager.error),
+      borderSide: BorderSide(width: 1, color: ColorsManager.red),
     ),
     focusedErrorBorder: OutlineInputBorder(
       borderRadius: BorderRadius.circular(AppSize.s10),

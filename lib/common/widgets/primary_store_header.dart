@@ -27,12 +27,16 @@ class PrimaryStoreHeader extends StatelessWidget {
             Positioned(
               top: AppNegativeSizes.n150,
               right: AppNegativeSizes.n250,
-              child: CircularContainer(),
+              child: CustomRoundedContainer(
+                raduis: AppSize.s400,
+              ),
             ),
             Positioned(
               top: AppSize.s100,
               right: AppNegativeSizes.n300,
-              child: CircularContainer(),
+              child: CustomRoundedContainer(
+                raduis: AppSize.s400,
+              ),
             ),
             child,
           ],

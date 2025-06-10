@@ -3,6 +3,7 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:fixithub/app/core/resources/assets_manager.dart';
 import 'package:fixithub/app/core/resources/color_manager.dart';
 import 'package:fixithub/app/core/resources/values_manager.dart';
+import 'package:fixithub/common/utils/helpers/helper_functions.dart';
 import 'package:fixithub/common/widgets/circular_container.dart';
 import 'package:fixithub/common/widgets/custom_ronded_image.dart';
 import 'package:fixithub/common/widgets/make_spacke.dart';
@@ -11,7 +12,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get_state_manager/src/rx_flutter/rx_obx_widget.dart';
 
 class HomePromoSlider extends StatelessWidget {
-   HomePromoSlider({
+  HomePromoSlider({
     super.key,
     required this.banners,
   });
@@ -19,6 +20,10 @@ class HomePromoSlider extends StatelessWidget {
   final controller = HomeController.instance;
   @override
   Widget build(BuildContext context) {
+    final isDarkMode = HelperFunctions.isDarkMode(context: context);
+    final Color selectedDotColor =
+        isDarkMode ? ColorsManager.white : ColorsManager.primary;
+    // final Color unSelectedDotColor = isDarkMode ? ColorsManager.lightPrimary : ColorsManager.primary;
     return Column(
       children: [
         CarouselSlider(
@@ -30,6 +35,7 @@ class HomePromoSlider extends StatelessWidget {
               )
               .toList(),
           options: CarouselOptions(
+            // autoPlay: true, //! un comment it in production
             viewportFraction: AppFractions.f10,
             onPageChanged: (index, _) => controller.updatePageIndicator(index),
           ),
@@ -41,12 +47,12 @@ class HomePromoSlider extends StatelessWidget {
           children: [
             for (int i = 0; i < banners.length; i++)
               Obx(
-                () => CircularContainer(
+                () => CustomRoundedContainer(
                   width: AppSize.s20,
                   height: AppSize.s4,
                   backgroundColor: controller.carousalCurrentIndex.value == i
-                      ? ColorsManager.white
-                      : ColorsManager.grey,
+                      ? selectedDotColor
+                      : ColorsManager.lightPrimary,
                   opacityFraction: AppFractions.f10,
                   margin: EdgeInsets.only(
                     right: AppMargin.m16,

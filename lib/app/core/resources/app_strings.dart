@@ -3,7 +3,10 @@ abstract class StringsManager {
   static const String requestCancelMessage = "Request was cancelled";
   static const String couldNotLaunchUrl = "Couldn't launch this url";
   static const String logoString = "FixItHub";
+  static const String leftText = "left";
   static const String hiMessage = "Hi, ";
+  static const String productName1 = 'Shoes';
+  static const String productOneDescription= 'Sports shoes with an awesome desing';
   static const String viewAllButtonText = "View All";
   static const String popularCategories = "Popular Categories";
   static const String searchFieldMessage = "Search in Store";
