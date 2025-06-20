@@ -1,12 +1,12 @@
 import 'package:fixithub/app/core/resources/color_manager.dart';
 import 'package:fixithub/app/core/resources/values_manager.dart';
 import 'package:fixithub/common/utils/helpers/helper_functions.dart';
-import 'package:fixithub/common/widgets/make_spacke.dart';
+import 'package:fixithub/common/widgets/global/make_spacke.dart';
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 
-class VerticalTextImage extends StatelessWidget {
-  const VerticalTextImage({
+class CustomVerticalTextImage extends StatelessWidget {
+  const CustomVerticalTextImage({
     super.key,
     this.backGroundColor = ColorsManager.white,
     this.textColor = ColorsManager.white,

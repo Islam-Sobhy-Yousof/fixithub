@@ -1,7 +1,7 @@
 import 'package:fixithub/app/core/resources/color_manager.dart';
 import 'package:fixithub/app/core/resources/values_manager.dart';
-import 'package:fixithub/common/widgets/circular_container.dart';
-import 'package:fixithub/common/widgets/custom_curved_container.dart';
+import 'package:fixithub/common/widgets/custom_components/custom_circular_container.dart';
+import 'package:fixithub/common/widgets/custom_components/custom_curved_container.dart';
 import 'package:flutter/material.dart';
 
 class PrimaryStoreHeader extends StatelessWidget {

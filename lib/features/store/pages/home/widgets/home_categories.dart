@@ -1,5 +1,5 @@
 import 'package:fixithub/app/core/resources/values_manager.dart';
-import 'package:fixithub/common/widgets/vertical_text_image.dart';
+import 'package:fixithub/common/widgets/custom_components/custom_vertical_text_image.dart';
 import 'package:flutter/material.dart';
 
 class HomeCategories extends StatelessWidget {
@@ -15,7 +15,7 @@ class HomeCategories extends StatelessWidget {
         itemCount: 6,
         scrollDirection: Axis.horizontal,
         itemBuilder: (_, index) {
-          return VerticalTextImage(
+          return CustomVerticalTextImage(
             text: 'Furnture',
             image: '',
             onTap: () {},

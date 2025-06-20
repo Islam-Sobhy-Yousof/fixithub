@@ -5,19 +5,19 @@ import 'package:fixithub/app/core/resources/color_manager.dart';
 import 'package:fixithub/app/core/resources/values_manager.dart';
 import 'package:fixithub/common/styles/shadow_style.dart';
 import 'package:fixithub/common/utils/helpers/helper_functions.dart';
-import 'package:fixithub/common/widgets/circular_container.dart';
+import 'package:fixithub/common/widgets/custom_components/custom_circular_container.dart';
 import 'package:fixithub/common/widgets/layout/custom_sliver_grid_layout.dart';
 import 'package:fixithub/common/widgets/shopping_card/custom_chip.dart';
 import 'package:fixithub/common/widgets/shopping_card/custom_circular_icon.dart';
-import 'package:fixithub/common/widgets/custom_ronded_image.dart';
-import 'package:fixithub/common/widgets/custom_search_bar.dart';
-import 'package:fixithub/common/widgets/custom_section_heading.dart';
-import 'package:fixithub/common/widgets/make_spacke.dart';
-import 'package:fixithub/common/widgets/primary_store_header.dart';
+import 'package:fixithub/common/widgets/custom_components/custom_ronded_image.dart';
+import 'package:fixithub/common/widgets/custom_components/custom_search_bar.dart';
+import 'package:fixithub/common/widgets/custom_components/custom_section_heading.dart';
+import 'package:fixithub/common/widgets/global/make_spacke.dart';
+import 'package:fixithub/common/widgets/store/primary_store_header.dart';
 import 'package:fixithub/common/widgets/shopping_card/custom_product_card_vertical.dart';
 import 'package:fixithub/common/widgets/shopping_card/custom_product_text.dart';
 import 'package:fixithub/common/widgets/shopping_card/custom_vertical_card.dart';
-import 'package:fixithub/common/widgets/vertical_text_image.dart';
+import 'package:fixithub/common/widgets/custom_components/custom_vertical_text_image.dart';
 import 'package:fixithub/features/store/pages/home/controller/home_controller.dart';
 import 'package:fixithub/features/store/pages/home/widgets/home_app_bar.dart';
 import 'package:fixithub/features/store/pages/home/widgets/home_categories.dart';
@@ -56,6 +56,23 @@ class HomeView extends StatelessWidget {
                   const MakeSpacke(),
                 ],
               ),
+            ),
+          ),
+          SliverToBoxAdapter(
+            child: CustomSectionHeading(
+              showButtonColor: true,
+              buttonTextColor: ColorsManager.white,
+              text: StringsManager.populartProducts,
+              onPressed: () {
+                Get.to(
+                  Dummy(),
+                );
+              },
+            ),
+          ),
+          SliverPadding(
+            padding: EdgeInsets.only(
+              bottom: AppPadding.p8,
             ),
           ),
           // Grid Section

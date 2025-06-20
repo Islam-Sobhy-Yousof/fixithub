@@ -1,7 +1,7 @@
 import 'package:fixithub/app/core/resources/app_strings.dart';
 import 'package:fixithub/app/core/resources/values_manager.dart';
 import 'package:fixithub/common/styles/spacing_style.dart';
-import 'package:fixithub/common/widgets/make_spacke.dart';
+import 'package:fixithub/common/widgets/global/make_spacke.dart';
 import 'package:fixithub/features/auth/forget_password/widgets/forget_password_fotter.dart';
 import 'package:fixithub/features/auth/resend_top/widgets/resend_otp_footer.dart';
 import 'package:fixithub/features/auth/widgets/auth_header.dart';

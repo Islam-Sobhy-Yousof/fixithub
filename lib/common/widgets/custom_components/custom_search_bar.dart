@@ -1,7 +1,7 @@
 import 'package:fixithub/app/core/resources/color_manager.dart';
 import 'package:fixithub/app/core/resources/values_manager.dart';
 import 'package:fixithub/common/utils/helpers/helper_functions.dart';
-import 'package:fixithub/common/widgets/make_spacke.dart';
+import 'package:fixithub/common/widgets/global/make_spacke.dart';
 import 'package:flutter/material.dart';
 
 class CustomSearchBar extends StatelessWidget {

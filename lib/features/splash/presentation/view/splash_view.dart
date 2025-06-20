@@ -9,7 +9,7 @@ import 'package:fixithub/app/core/resources/styles_manager.dart';
 import 'package:fixithub/app/core/resources/values_manager.dart';
 import 'package:fixithub/common/utils/helpers/helper_functions.dart';
 import 'package:fixithub/app/routes/routes.dart';
-import 'package:fixithub/common/widgets/fixithub_text_logo.dart';
+import 'package:fixithub/common/widgets/global/fixithub_text_logo.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -23,8 +23,7 @@ class SplashView extends StatefulWidget {
 class _SplashViewState extends State<SplashView> {
   bool _moveToCenter = false;
   bool isDark = false;
-  final LocalStorageHelper _localStorageHelper =
-      Get.find<LocalStorageHelper>();
+  final LocalStorageHelper _localStorageHelper = Get.find<LocalStorageHelper>();
 
   Timer? _timer;
   @override
@@ -71,8 +70,10 @@ class _SplashViewState extends State<SplashView> {
   @override
   Widget build(BuildContext context) {
     final screenHeight = HelperFunctions.screenHeight();
-
+    final isDarkMode = HelperFunctions.isDarkMode(context: context);
     return Scaffold(
+      backgroundColor:
+          isDarkMode ? ColorsManager.background : ColorsManager.lightPrimary,
       body: Stack(
         children: [
           AnimatedPositioned(
@@ -85,7 +86,7 @@ class _SplashViewState extends State<SplashView> {
             left: AppSize.s0,
             right: AppSize.s0,
             child: Center(
-                child:  FixithubTextLogo(),
+              child: FixithubTextLogo(),
             ),
           ),
         ],

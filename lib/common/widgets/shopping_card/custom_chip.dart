@@ -13,12 +13,12 @@ class CustomChip extends StatelessWidget {
     required this.child,
   });
 
-  final double width;
-  final double height;
-  final Color color;
+  final double? width;
+  final double? height;
+  final Color? color;
   final double radius;
   final Widget child;
-  final Color textColor;
+  final Color? textColor;
 
   @override
   Widget build(BuildContext context) {

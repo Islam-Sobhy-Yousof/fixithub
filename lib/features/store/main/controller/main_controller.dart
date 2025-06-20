@@ -1,4 +1,5 @@
 import 'package:fixithub/features/store/pages/home/view/home_view.dart';
+import 'package:fixithub/features/store/pages/whishlist/view/whishlist_view.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -8,9 +9,7 @@ class MainController extends GetxController {
 
   final screens = [
     HomeView(),
-    Container(
-      color: Colors.deepOrange,
-    ),
+    WhishlistView(),
     Container(
       color: Colors.deepPurple,
     ),

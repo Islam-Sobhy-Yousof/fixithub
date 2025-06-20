@@ -4,6 +4,7 @@ abstract class StringsManager {
   static const String couldNotLaunchUrl = "Couldn't launch this url";
   static const String logoString = "FixItHub";
   static const String leftText = "left";
+  static const String populartProducts = "Popular Producst";
   static const String hiMessage = "Hi, ";
   static const String productName1 = 'Shoes';
   static const String productOneDescription= 'Sports shoes with an awesome desing';

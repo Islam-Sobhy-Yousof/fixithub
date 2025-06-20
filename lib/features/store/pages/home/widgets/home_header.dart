@@ -1,9 +1,10 @@
 import 'package:fixithub/app/core/resources/app_strings.dart';
+import 'package:fixithub/app/core/resources/color_manager.dart';
 import 'package:fixithub/app/core/resources/values_manager.dart';
-import 'package:fixithub/common/widgets/custom_search_bar.dart';
-import 'package:fixithub/common/widgets/custom_section_heading.dart';
-import 'package:fixithub/common/widgets/make_spacke.dart';
-import 'package:fixithub/common/widgets/primary_store_header.dart';
+import 'package:fixithub/common/widgets/custom_components/custom_search_bar.dart';
+import 'package:fixithub/common/widgets/custom_components/custom_section_heading.dart';
+import 'package:fixithub/common/widgets/global/make_spacke.dart';
+import 'package:fixithub/common/widgets/store/primary_store_header.dart';
 import 'package:fixithub/features/store/pages/home/widgets/home_app_bar.dart';
 import 'package:fixithub/features/store/pages/home/widgets/home_categories.dart';
 import 'package:flutter/material.dart';
@@ -31,6 +32,7 @@ class HomeHeader extends StatelessWidget {
               height: AppSize.s30,
             ),
             const CustomSectionHeading(
+              textColor: ColorsManager.white,
               text: StringsManager.popularCategories,
               showActionButton: false,
             ),

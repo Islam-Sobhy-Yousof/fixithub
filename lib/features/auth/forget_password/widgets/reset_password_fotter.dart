@@ -2,7 +2,7 @@ import 'package:fixithub/app/core/resources/app_strings.dart';
 import 'package:fixithub/app/core/resources/color_manager.dart';
 import 'package:fixithub/app/core/resources/values_manager.dart';
 import 'package:fixithub/app/routes/routes.dart';
-import 'package:fixithub/common/widgets/make_spacke.dart';
+import 'package:fixithub/common/widgets/global/make_spacke.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:get/route_manager.dart';
